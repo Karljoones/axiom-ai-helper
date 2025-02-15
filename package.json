@@ -1,6 +1,6 @@
 {
   "name": "axiom-ai-helper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +11,10 @@
   ],
   "author": "Karl Jones",
   "license": "MIT",
-  "description": "A helper library to use with Axiom.ai's API."
+  "description": "A helper library to use with Axiom.ai's API.",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Karljoones/axiom-ai-helper.git"
+  },
+  "readmeFilename": "README.md"
 }
