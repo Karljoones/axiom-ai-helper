@@ -1,0 +1,15 @@
+{
+  "name": "axiom-ai-helper",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Axiom.ai",
+    "API"
+  ],
+  "author": "Karl Jones",
+  "license": "MIT",
+  "description": "A helper library to use with Axiom.ai's API."
+}
