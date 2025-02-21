@@ -1,11 +1,10 @@
 import { checkRequirements, triggerEndpoint } from './utils';
 
 export const trigger = async (name, data, key = process.env.REACT_APP_AXIOM_AI_API_KEY) => {
-
     try {
         checkRequirements(key, name, data);
-    } catch (error) {
-        throw new Error(`Error triggering automation: ${error}`);
+    } catch (e) {
+        throw new Error(`Error triggering automation: ${e.message}`);
     }
 
     try {
@@ -29,7 +28,7 @@ export const trigger = async (name, data, key = process.env.REACT_APP_AXIOM_AI_A
             message: result.message ? result.message : "Automation successfully triggered"
         }
     } catch (e) {
-        throw new Error(`Error triggering automation: ${e}`);
+        throw new Error(`Error triggering automation: ${e.message}`);
     }
 }
 

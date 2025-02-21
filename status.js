@@ -4,7 +4,7 @@ export const checkStatus = async (name, key = process.env.REACT_APP_AXIOM_AI_API
     try {
         checkRequirements(key, name);
     } catch (e) {
-        throw new Error(`Error checking status: ${e}`);
+        throw new Error(`Error checking status: ${e.message}`);
     }
 
     try {
@@ -27,7 +27,7 @@ export const checkStatus = async (name, key = process.env.REACT_APP_AXIOM_AI_API
             'data': result.data ? result.data : null,
         }
     } catch (e) {
-        throw new Error(`Error checking status: ${e}`);
+        throw new Error(`Error checking status: ${e.message}`);
     }
 }
 
