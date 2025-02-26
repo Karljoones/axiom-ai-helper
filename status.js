@@ -1,6 +1,6 @@
 import { checkRequirements, statusEndpoint } from './utils';
 
-export const checkStatus = async (name, key = process.env.REACT_APP_AXIOM_AI_API_KEY) => {
+export const checkStatus = async (name, key) => {
     try {
         checkRequirements(key, name);
     } catch (e) {

@@ -1,6 +1,6 @@
 import { checkRequirements, triggerEndpoint } from './utils';
 
-export const trigger = async (name, data, key = process.env.REACT_APP_AXIOM_AI_API_KEY) => {
+export const trigger = async (name, key, data) => {
     try {
         checkRequirements(key, name, data);
     } catch (e) {

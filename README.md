@@ -12,7 +12,7 @@ npm install axiom-ai-helper
 
 ## Setup
 
-It's recommended that you insert your API key into a `.env` file, the library will automatically look for this file and use the key inside. If you don't have a `.env` file, you can pass the key as an argument to the functions. It will look for the `REACT_APP_AXIOM_API_KEY` key in the `.env` file.
+It's recommended that you insert your API key into a `.env` file, you can then pass this value into the library for use with your automations.
 
 ## Usage
 
@@ -21,7 +21,7 @@ To use the library to trigger an automation, you can use the following code:
 ```js
 import { trigger } from 'axiom-ai-helper';
 
-const result = await trigger("Your automation name", [["Data", "Data"]], "Your API key (optional)");
+const result = await trigger("Your automation name", "KEY", [["Data", "Data"]]);
 console.log(result);
 ```
 
@@ -42,7 +42,7 @@ To use the library to check the status of a running automation, you can use the 
 ```js
 import { checkStatus } from 'axiom-ai-helper';
 
-const status = await checkStatus("Your automation name", "Your API key (optional)");
+const status = await checkStatus("Your automation name", "KEY");
 console.log(status);
 ```
 
