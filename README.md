@@ -16,6 +16,15 @@ It's recommended that you insert your API key into a `.env` file, you can then p
 
 ## Usage
 
+Supports the following Axiom.ai API calls:
+
+- Trigger an automation
+- Automation status and results
+- Remaining runtime
+- List automations
+- Stop an automation
+- Run reports
+
 To use the library to trigger an automation, you can use the following code:
 
 ```js
