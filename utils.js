@@ -1,9 +1,18 @@
-export const triggerEndpoint = "https://lar.axiom.ai/api/v3/trigger";
-export const statusEndpoint = "https://lar.axiom.ai/api/v3/run-data";
+export const domain = "https://lar.axiom.ai/api/v3"
 
-export const checkRequirements = (key, name, data) => {
-    if (!key) throw new Error('API Key is required, provide key as a parameter or set REACT_APP_AXIOM_AI_API_KEY in .env');
-    if (!name) throw new Error('Automation name is required');
+export const endpoints = {
+    trigger: "/trigger",
+    status: "/run-data",
+    runData: "/run-data",
+    remainingRuntime: "/remaining-runtime",
+    listAutomations: "/list-automations",
+    runReports: "/run-reports",
+    stop: "/stop",
+}
+
+export const checkRequirements = (key, name, data, nameRequired = false) => {
+    if (!key) throw new Error('API Key is required, provide key as a parameter');
+    if (nameRequired && !name) throw new Error('Automation name is required');
 
     if (data && !Array.isArray(data)) throw new Error('Data must be an array of arrays, i.e. [["test", "test"]]');
     if (data) {

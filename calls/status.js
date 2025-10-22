@@ -1,14 +1,14 @@
-import { checkRequirements, statusEndpoint } from './utils';
+import { checkRequirements, domain, endpoints } from '../utils';
 
 export const checkStatus = async (name, key) => {
     try {
-        checkRequirements(key, name);
+        checkRequirements(key, name, null, true);
     } catch (e) {
         throw new Error(`Error checking status: ${e.message}`);
     }
 
     try {
-        const result = await fetch(statusEndpoint, {
+        const result = await fetch(`${domain}${endpoints.status}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
