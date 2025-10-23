@@ -12,8 +12,6 @@ export const stop = async (viewerUrl) => {
     const hostParts = hostVal && hostVal.split('-');
     const pid = hostParts[1].substring(2, 4);
 
-    console.log(pid, password);
-
     try {
         const result = await fetch(`${domain}${endpoints.stop}`, {
             method: 'POST',
